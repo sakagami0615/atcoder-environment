@@ -1,0 +1,34 @@
+#!/bin/bash
+# --------------------------------------------------
+# 問題フォルダにある A, B, ... のmain.pyを開くスクリプト
+# (問題フォルダに入った状態で実施する)
+# --------------------------------------------------
+
+# vscode(code) or cursor
+EDITOR=code
+
+SCRIPT_NAME=$1
+QUES_ID=$2
+
+# 引数がある場合は特定の問題を開く
+if [ -n "$QUES_ID" ]; then
+    # 入力を大文字に変換 (例: a -> A)
+    prob=$(echo "$QUES_ID" | tr '[:lower:]' '[:upper:]')
+    target="$prob/$SCRIPT_NAME"
+
+    # ディレクトリが存在するか確認
+    if [ ! -d "$prob" ]; then
+        echo "Error: Directory '$prob' does not exist."
+        exit 1
+    fi
+
+    # VS Code で開く
+    ${EDITOR} "$target"
+else
+    # 引数がない場合は全ての main.py を開く
+    for dir in [A-Z]*; do
+        if [ -d "$dir" ] && [ -f "$dir/$SCRIPT_NAME" ]; then
+            ${EDITOR} "$dir/$SCRIPT_NAME"
+        fi
+    done
+fi

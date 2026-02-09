@@ -1,0 +1,14 @@
+#!/bin/bash
+# --------------------------------------------------
+# atcoder-tools を使用して提出するスクリプト
+# (poetry環境で実施する想定)
+# --------------------------------------------------
+
+if [ -n "$1" ]; then
+    cd $1
+    poetry run atcoder-tools submit -u
+    
+else
+    echo "Error: Question alphabet does not exist."
+    return 1 2>/dev/null || exit 1
+fi

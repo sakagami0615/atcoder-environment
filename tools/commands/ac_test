@@ -1,0 +1,14 @@
+#!/bin/bash
+# --------------------------------------------------
+# atcoder-tools を使用してテストを実施するスクリプト
+# (poetry環境で実施する想定)
+# --------------------------------------------------
+
+if [ -n "$2" ] && [ -n "$1" ] ; then
+    poetry run atcoder-tools test --dir $2 --exec $1 
+elif [ -n "$2" ] && [ -n "$1" ] ; then
+    poetry run atcoder-tools test --exec $1
+else
+    poetry run atcoder-tools test
+fi
+# poetry run atcoder-tools test --exec $1

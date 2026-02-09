@@ -1,0 +1,47 @@
+{
+    // run: ctrl + shift + b
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build & exec of active file",
+            "command": "g++",
+            "args": [
+                "-O0",
+                "-std=gnu++17",
+                "-Wall", "-Wextra", "-Wconversion", "-Wshadow", "-Wfloat-equal",
+                "-ftrapv", "-fsanitize=undefined,address", "-fno-omit-frame-pointer", "-fno-sanitize-recover",
+                "-g", "-I", "/contest/ac-library",
+                "${file}",
+                "-o", "a.out", "&", "./a.out"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "type": "shell",
+            "label": "Python: Python exec with Poetry of active file",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "poetry",
+            "args": [
+                "run",
+                "python",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+        }
+    ],
+    "version": "2.0.0"   
+}

@@ -1,0 +1,23 @@
+#!/bin/bash
+# --------------------------------------------------
+# atcoder-tools を使用して環境を生成するスクリプト
+# (poetry環境で実施する想定)
+# --------------------------------------------------
+
+CONTEST_ID=$1
+LANG=$2
+TEMPLATE=$3
+
+CONFIG=/contest/atcoder/tools/atcoder-tools/templates/atcodertools-custom.toml
+
+
+if [ -n "$CONTEST_ID" ]; then
+    if [ -n "$TEMPLATE" ]; then
+        poetry run atcoder-tools gen $CONTEST_ID --workspace=./ --lang=$LANG --template=$TEMPLATE --config=$CONFIG
+    else
+        poetry run atcoder-tools gen $CONTEST_ID --workspace=./ --lang=$LANG --config=$CONFIG
+    fi
+else
+    echo "Error: Question No. does not exist."
+    return 1 2>/dev/null || exit 1
+fi

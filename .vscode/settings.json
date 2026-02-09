@@ -1,0 +1,33 @@
+{
+    "cSpell.words": [
+        "astype",
+        "atcoder",
+        "chmax",
+        "chmin",
+        "cumsum",
+        "irfft",
+        "lldb",
+        "modint",
+        "rfft",
+        "RREP",
+        "YESNO",
+        "Reversi"
+    ],
+    "C_Cpp.default.includePath": [
+        "/contest/ac-library/"
+    ],
+    "files.associations": {
+        "*.cpp": "cpp",
+        "all": "cpp",
+        "ostream": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp",
+        "iostream": "cpp"
+    },
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+}
