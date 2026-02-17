@@ -7,9 +7,9 @@ services:
     container_name: atcoder-container
     tty: true
     volumes:
-      - ../../atcoder:/contest/atcoder
+      - ../../atcoder-environment:/contest/atcoder
       - ../../ac-library:/contest/ac-library
-      - ../../my-library:/contest/my-library
+      - ../../atcoder-my-library:/contest/my-library
       - ./.bashrc:/root/.bashrc
     ulimits:
       stack: -1  # スタックサイズを無制限に設定
