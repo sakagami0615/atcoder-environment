@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(time git status:*)",
+      "Bash(time bash:*)",
+      "Bash(time direnv status:*)",
+      "Bash(mount)",
+      "Bash(git checkout:*)"
+    ]
+  }
+}
