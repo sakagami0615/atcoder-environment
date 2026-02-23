@@ -1,0 +1,15 @@
+services:
+  atcoder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: atcoder
+    container_name: atcoder-contest
+    tty: true
+    volumes:
+      - ../atcoder-environment:/atcoder
+      - ../ac-library:/atcoder/ac-library           # ACLIBのソースコードをマウント
+      - ../atcoder-my-library:/atcoder/my-library   # 自作ライブラリのソースコードをマウント
+      - ./.bashrc:/root/.bashrc
+    ulimits:
+      stack: -1  # スタックサイズを無制限に設定

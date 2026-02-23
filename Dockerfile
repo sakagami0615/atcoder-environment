@@ -3,7 +3,7 @@ FROM debian:bookworm-slim
 ENV TZ=Asia/Tokyo
 ENV LANG=ja_JP.UTF-8
 
-WORKDIR /contest/atcoder
+WORKDIR /atcoder
 
 # ロケール設定
 RUN apt update && apt install -y locales
@@ -17,7 +17,7 @@ RUN mkdir ~/.pip && echo "[global]\nbreak-system-packages = true" > ~/.pip/pip.c
 RUN pip3 install poetry
 
 # 仮想環境の準備
-COPY ../pyproject.toml* ../poetry.lock* ../.envrc* ./
+COPY pyproject.toml* poetry.lock* .envrc* ./
 RUN poetry install --no-root
 RUN direnv allow
 
