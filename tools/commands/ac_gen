@@ -8,7 +8,7 @@ CONTEST_ID=$1
 LANG=$2
 TEMPLATE=$3
 
-CONFIG=/contest/atcoder/tools/atcoder-tools/templates/atcodertools-custom.toml
+CONFIG=/atcoder/tools/atcoder-tools/templates/atcodertools-custom.toml
 
 
 if [ -n "$CONTEST_ID" ]; then

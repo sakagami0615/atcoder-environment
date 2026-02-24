@@ -13,7 +13,7 @@ lang = 'cpp' # 'cpp' or 'java' (Currently)
 #code_generator_file=
 
 # NOTE: Pythonの自作ユニバーサルコードジェネレーターを設定
-code_generator_toml="/contest/atcoder/tools/atcoder-tools/universal_generator/python.toml"
+code_generator_toml="/atcoder/tools/atcoder-tools/universal_generator/python.toml"
 
 [postprocess]
 ## exec_on_each_problem_dir is executed after every problem directory's creation

@@ -183,10 +183,10 @@ alias ac_tool_test="poetry run atcoder-tools test"
 function c_gen() {
     CONTEST_ID="$1"
     LANG=cpp
-    # CUSTOM_TEMPLATE=/contest/atcoder/tools/atcoder-tools/templates/custom_template.cpp
+    # CUSTOM_TEMPLATE=/atcoder/tools/atcoder-tools/templates/custom_template.cpp
     if [ -n $CONTEST_ID ]; then
-        # bash /contest/atcoder/tools/commands/ac_gen $CONTEST_ID $LANG $CUSTOM_TEMPLATE
-        bash /contest/atcoder/tools/commands/ac_gen $CONTEST_ID $LANG
+        # bash /atcoder/tools/commands/ac_gen $CONTEST_ID $LANG $CUSTOM_TEMPLATE
+        bash /atcoder/tools/commands/ac_gen $CONTEST_ID $LANG
         cd $1
     fi
 }
@@ -194,9 +194,9 @@ function c_open() {
     CONTEST_ID="$1"
     SCRIPT_NAME=main.cpp
     if [ -n $CONTEST_ID ]; then
-        bash /contest/atcoder/tools/commands/ac_open $SCRIPT_NAME $CONTEST_ID
+        bash /atcoder/tools/commands/ac_open $SCRIPT_NAME $CONTEST_ID
     else
-        bash /contest/atcoder/tools/commands/ac_open $SCRIPT_NAME
+        bash /atcoder/tools/commands/ac_open $SCRIPT_NAME
     fi
 
 }
@@ -219,9 +219,9 @@ function c_test() {
 function py_gen() {
     CONTEST_ID="$1"
     LANG=python
-    CUSTOM_TEMPLATE=/contest/atcoder/tools/atcoder-tools/templates/custom_template.py
+    CUSTOM_TEMPLATE=/atcoder/tools/atcoder-tools/templates/custom_template.py
     if [ -n $CONTEST_ID ]; then
-        bash /contest/atcoder/tools/commands/ac_gen $CONTEST_ID $LANG $CUSTOM_TEMPLATE
+        bash /atcoder/tools/commands/ac_gen $CONTEST_ID $LANG $CUSTOM_TEMPLATE
         cd $1
     fi
 }
