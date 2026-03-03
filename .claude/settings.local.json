@@ -5,7 +5,8 @@
       "Bash(time bash:*)",
       "Bash(time direnv status:*)",
       "Bash(mount)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "WebFetch(domain:atcoder.jp)"
     ]
   }
 }
