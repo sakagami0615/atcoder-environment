@@ -41,3 +41,4 @@
 *.dwo
 
 @PERSONAL
+.vscode/vscode-kanban.json

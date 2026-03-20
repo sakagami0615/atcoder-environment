@@ -35,5 +35,6 @@
     "python-envs.pythonProjects": [],
     "kanban": {
         "openOnStartup": true
-    }
+    },
+    "cmake.sourceDirectory": "/atcoder/ac-library/test/benchmark"
 }
