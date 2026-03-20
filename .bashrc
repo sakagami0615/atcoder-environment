@@ -256,3 +256,7 @@ function py_test() {
         poetry run atcoder-tools test --exec "python main.py"
     fi
 }
+
+alias pyg='py_gen'
+alias pyo='py_open'
+alias pyt='py_test'
